@@ -1,0 +1,17 @@
+max_width = 100
+
+hard_tabs = false
+tab_spaces = 4
+
+use_small_heuristics = "Max"
+
+newline_style = "Unix"
+
+# Use fn_params_layout instead of deprecated fn_args_layout
+fn_params_layout = "Vertical"
+
+# Basic stable formatting options
+reorder_imports = true
+
+# Stable derive merging
+merge_derives = true

@@ -1,0 +1,35 @@
+cognitive-complexity-threshold = 25
+too-many-lines-threshold = 300
+
+missing-docs-in-crate-items = false
+
+enum-variant-name-threshold = 0
+struct-field-name-threshold = 0
+
+single-char-binding-names-threshold = 3
+
+too-many-arguments-threshold = 8
+
+large-error-threshold = 128
+
+array-size-threshold = 512000
+
+trivial-copy-size-limit = 256
+
+disallowed-methods = [
+    { path = "std::option::Option::unwrap", reason = "Use proper error handling" },
+    { path = "std::result::Result::unwrap", reason = "Use proper error handling" },
+]
+
+max-fn-params-bools = 2
+max-struct-bools = 3
+
+warn-on-all-wildcard-imports = true
+
+check-private-items = true
+
+max-include-file-size = 1000000
+
+unnecessary-box-size = 128
+
+max-suggested-slice-pattern-length = 3
