@@ -1,6 +1,8 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::fmt;
+
+use crate::core::parse::SqlDialect;
 use std::str::FromStr;
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -42,14 +44,6 @@ pub struct AstNode<T> {
     pub metadata: HashMap<String, String>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub enum SqlDialect {
-    PostgreSQL,
-    MySQL,
-    SQLite,
-    MSSQL,
-    Generic,
-}
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct ParseOptions {
@@ -365,7 +359,7 @@ impl Default for ParseOptions {
 impl ParseOptions {
     pub fn new() -> Self {
         Self {
-            dialect: SqlDialect::Generic,
+            dialect: SqlDialect::Standard,
             strict_mode: false,
             preserve_comments: false,
             case_sensitive: false,

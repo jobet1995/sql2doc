@@ -58,6 +58,8 @@ pub enum BinaryOperator {
     BitwiseAnd,
     BitwiseOr,
     BitwiseXor,
+    LeftShift,
+    RightShift,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
